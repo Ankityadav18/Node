@@ -49,6 +49,38 @@ fs.writeFileSync('./text.text','234567890')
 
 
 //!Exist
-fs.exists('./text.text',(exist)=>{
-    console.log(exist ? 'File is present' : 'file is not present');
+// fs.exists('./text.text',(exist)=>{
+//     console.log(exist ? 'File is present' : 'file is not present');
+// })
+
+//!Copy file
+//!Async copy
+// fs.copyFile('./text.text' ,'./index.html' ,(err)=>{
+//     if(err){
+//         console.log(err);
+    
+//     }
+//      else{
+//         console.log('file copied successfully');
+//     }
+// })
+
+//!Sync copying
+
+// try{
+// fs.copyFile('./text.text','./index.html');
+// console.log('copied succesfully');
+// }
+// catch(err){
+//     console.log('err');
+// }
+
+//!rename file
+fs.rename('./text.text','./newtext.text',(err)=>{
+if(err){
+    console.log(err);
+}
+else{
+    console.log('renamed successfully');
+}
 })
